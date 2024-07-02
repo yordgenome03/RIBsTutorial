@@ -7,9 +7,6 @@
 
 import RxSwift
 
-enum PlayerType {
-    case player1, player2
-}
 struct Score {
     let player1Score: Int
     let player2Score: Int
