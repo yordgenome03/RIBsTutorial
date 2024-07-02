@@ -13,9 +13,20 @@
 		A1D312712C3376F500D8F7C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D3126F2C3376F500D8F7C9 /* Main.storyboard */; };
 		A1D312732C3376F700D8F7C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1D312722C3376F700D8F7C9 /* Assets.xcassets */; };
 		A1D312762C3376F700D8F7C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1D312742C3376F700D8F7C9 /* LaunchScreen.storyboard */; };
+		A1D3127F2C337A4800D8F7C9 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3127E2C337A4800D8F7C9 /* AppComponent.swift */; };
+		A1D312872C337B2A00D8F7C9 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D312832C337B2A00D8F7C9 /* RootRouter.swift */; };
+		A1D312882C337B2A00D8F7C9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D312842C337B2A00D8F7C9 /* RootViewController.swift */; };
+		A1D312892C337B2A00D8F7C9 /* RootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D312852C337B2A00D8F7C9 /* RootBuilder.swift */; };
+		A1D3128A2C337B2A00D8F7C9 /* RootInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D312862C337B2A00D8F7C9 /* RootInteractor.swift */; };
+		A1D3128C2C337B6F00D8F7C9 /* RootComponent+LoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3128B2C337B6F00D8F7C9 /* RootComponent+LoggedOut.swift */; };
+		A1D3128F2C337D0E00D8F7C9 /* DELETE_ME.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3128E2C337D0E00D8F7C9 /* DELETE_ME.swift */; };
+		EA44FC1FE919514F6F5E03AE /* Pods_RIBsTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07A932FFF08939F7C4699E07 /* Pods_RIBsTutorial.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07A932FFF08939F7C4699E07 /* Pods_RIBsTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RIBsTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E13D2A4FB01E2B613BC4AB2 /* Pods-RIBsTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsTutorial.release.xcconfig"; path = "Target Support Files/Pods-RIBsTutorial/Pods-RIBsTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		33F1C4927ED0FB603348C060 /* Pods-RIBsTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RIBsTutorial.debug.xcconfig"; path = "Target Support Files/Pods-RIBsTutorial/Pods-RIBsTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		A1D312662C3376F500D8F7C9 /* RIBsTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RIBsTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D312692C3376F500D8F7C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1D3126B2C3376F500D8F7C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,13 @@
 		A1D312722C3376F700D8F7C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1D312752C3376F700D8F7C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1D312772C3376F700D8F7C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1D3127E2C337A4800D8F7C9 /* AppComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		A1D312832C337B2A00D8F7C9 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		A1D312842C337B2A00D8F7C9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		A1D312852C337B2A00D8F7C9 /* RootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootBuilder.swift; sourceTree = "<group>"; };
+		A1D312862C337B2A00D8F7C9 /* RootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootInteractor.swift; sourceTree = "<group>"; };
+		A1D3128B2C337B6F00D8F7C9 /* RootComponent+LoggedOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootComponent+LoggedOut.swift"; sourceTree = "<group>"; };
+		A1D3128E2C337D0E00D8F7C9 /* DELETE_ME.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DELETE_ME.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA44FC1FE919514F6F5E03AE /* Pods_RIBsTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DCEE737E493CB50CD1F2F40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07A932FFF08939F7C4699E07 /* Pods_RIBsTutorial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A1D3125D2C3376F500D8F7C9 = {
 			isa = PBXGroup;
 			children = (
 				A1D312682C3376F500D8F7C9 /* RIBsTutorial */,
 				A1D312672C3376F500D8F7C9 /* Products */,
+				B106BC834B667B943AE83544 /* Pods */,
+				2DCEE737E493CB50CD1F2F40 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +85,63 @@
 		A1D312682C3376F500D8F7C9 /* RIBsTutorial */ = {
 			isa = PBXGroup;
 			children = (
-				A1D312692C3376F500D8F7C9 /* AppDelegate.swift */,
-				A1D3126B2C3376F500D8F7C9 /* SceneDelegate.swift */,
+				A1D3127D2C337A3400D8F7C9 /* AppStart */,
 				A1D3126D2C3376F500D8F7C9 /* ViewController.swift */,
+				A1D312822C337AF200D8F7C9 /* Root */,
+				A1D312802C337ABC00D8F7C9 /* LoggedOut */,
+				A1D312812C337AD600D8F7C9 /* Resources */,
 				A1D3126F2C3376F500D8F7C9 /* Main.storyboard */,
-				A1D312722C3376F700D8F7C9 /* Assets.xcassets */,
 				A1D312742C3376F700D8F7C9 /* LaunchScreen.storyboard */,
 				A1D312772C3376F700D8F7C9 /* Info.plist */,
 			);
 			path = RIBsTutorial;
+			sourceTree = "<group>";
+		};
+		A1D3127D2C337A3400D8F7C9 /* AppStart */ = {
+			isa = PBXGroup;
+			children = (
+				A1D3127E2C337A4800D8F7C9 /* AppComponent.swift */,
+				A1D312692C3376F500D8F7C9 /* AppDelegate.swift */,
+				A1D3126B2C3376F500D8F7C9 /* SceneDelegate.swift */,
+			);
+			path = AppStart;
+			sourceTree = "<group>";
+		};
+		A1D312802C337ABC00D8F7C9 /* LoggedOut */ = {
+			isa = PBXGroup;
+			children = (
+				A1D3128E2C337D0E00D8F7C9 /* DELETE_ME.swift */,
+			);
+			path = LoggedOut;
+			sourceTree = "<group>";
+		};
+		A1D312812C337AD600D8F7C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1D312722C3376F700D8F7C9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1D312822C337AF200D8F7C9 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A1D312852C337B2A00D8F7C9 /* RootBuilder.swift */,
+				A1D3128B2C337B6F00D8F7C9 /* RootComponent+LoggedOut.swift */,
+				A1D312862C337B2A00D8F7C9 /* RootInteractor.swift */,
+				A1D312832C337B2A00D8F7C9 /* RootRouter.swift */,
+				A1D312842C337B2A00D8F7C9 /* RootViewController.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		B106BC834B667B943AE83544 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33F1C4927ED0FB603348C060 /* Pods-RIBsTutorial.debug.xcconfig */,
+				2E13D2A4FB01E2B613BC4AB2 /* Pods-RIBsTutorial.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A1D3127A2C3376F700D8F7C9 /* Build configuration list for PBXNativeTarget "RIBsTutorial" */;
 			buildPhases = (
+				8B68119925F5A0EC5FD0842C /* [CP] Check Pods Manifest.lock */,
 				A1D312622C3376F500D8F7C9 /* Sources */,
 				A1D312632C3376F500D8F7C9 /* Frameworks */,
 				A1D312642C3376F500D8F7C9 /* Resources */,
+				413BB596FE5655C9D878EF9F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +212,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		413BB596FE5655C9D878EF9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIBsTutorial/Pods-RIBsTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RIBsTutorial/Pods-RIBsTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RIBsTutorial/Pods-RIBsTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B68119925F5A0EC5FD0842C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RIBsTutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A1D312622C3376F500D8F7C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D3127F2C337A4800D8F7C9 /* AppComponent.swift in Sources */,
+				A1D312892C337B2A00D8F7C9 /* RootBuilder.swift in Sources */,
+				A1D3128C2C337B6F00D8F7C9 /* RootComponent+LoggedOut.swift in Sources */,
+				A1D312872C337B2A00D8F7C9 /* RootRouter.swift in Sources */,
+				A1D312882C337B2A00D8F7C9 /* RootViewController.swift in Sources */,
 				A1D3126E2C3376F500D8F7C9 /* ViewController.swift in Sources */,
 				A1D3126A2C3376F500D8F7C9 /* AppDelegate.swift in Sources */,
+				A1D3128A2C337B2A00D8F7C9 /* RootInteractor.swift in Sources */,
+				A1D3128F2C337D0E00D8F7C9 /* DELETE_ME.swift in Sources */,
 				A1D3126C2C3376F500D8F7C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +415,7 @@
 		};
 		A1D3127B2C3376F700D8F7C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33F1C4927ED0FB603348C060 /* Pods-RIBsTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -314,6 +443,7 @@
 		};
 		A1D3127C2C3376F700D8F7C9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E13D2A4FB01E2B613BC4AB2 /* Pods-RIBsTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
