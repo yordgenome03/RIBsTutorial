@@ -1,5 +1,5 @@
 //
-//  RootBuilder.swift
+//  RootComponent+LoggedOut.swift
 //  RIBsTutorial
 //
 //  Created by yotahara on 2024/07/02.
