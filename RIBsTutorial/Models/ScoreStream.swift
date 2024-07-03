@@ -42,6 +42,8 @@ class ScoreStreamImpl: MutableScoreStream {
                 return Score(player1Score: currentScore.player1Score + 1, player2Score: currentScore.player2Score)
             case .player2:
                 return Score(player1Score: currentScore.player1Score, player2Score: currentScore.player2Score + 1)
+            case .none:
+                return currentScore
             }
         }()
         variable.value = newScore

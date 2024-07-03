@@ -14,45 +14,45 @@ protocol TicTacToePresentableListener: AnyObject {
 }
 
 final class TicTacToeViewController: UIViewController, TicTacToePresentable, TicTacToeViewControllable {
-
+    
     weak var listener: TicTacToePresentableListener?
-
+    
     init(player1Name: String,
          player2Name: String) {
         self.player1Name = player1Name
         self.player2Name = player2Name
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("Method is not supported")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.yellow
+        
+        view.backgroundColor = UIColor.white
         buildCollectionView()
     }
-
+    
     // MARK: - TicTacToePresentable
-
+    
     func setCell(atRow row: Int, col: Int, withPlayerType playerType: PlayerType) {
         let indexPathRow = row * GameConstants.colCount + col
-        let cell = collectionView.cellForItem(at: IndexPath(row: indexPathRow, section: Constants.sectionCount - 1))
-        cell?.backgroundColor = playerType.color
+        if let cell = collectionView.cellForItem(at: IndexPath(row: indexPathRow, section: Constants.sectionCount - 1)) as? TicTacToeCell {
+            cell.setMark(playerType.mark)
+        }
     }
-
-    func announce(winner: PlayerType?, withCompletionHandler handler: @escaping () -> ()) {
+    
+    
+    func announce(winner: PlayerType, withCompletionHandler handler: @escaping () -> ()) {
         let winnerString: String = {
-            if let winner = winner {
-                switch winner {
-                case .player1:
-                    return "\(player1Name) Won!"
-                case .player2:
-                    return "\(player2Name) Won!"
-                }
-            } else {
+            switch winner {
+            case .player1:
+                return "\(player1Name) Won!"
+            case .player2:
+                return "\(player2Name) Won!"
+            case .none:
                 return "It's a Tie"
             }
         }()
@@ -63,12 +63,12 @@ final class TicTacToeViewController: UIViewController, TicTacToePresentable, Tic
         alert.addAction(closeAction)
         present(alert, animated: true, completion: nil)
     }
-
+    
     // MARK: - Private
-
+    
     private let player2Name: String
     private let player1Name: String
-
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -76,11 +76,11 @@ final class TicTacToeViewController: UIViewController, TicTacToePresentable, Tic
         layout.itemSize = CGSize(width: Constants.cellSize, height: Constants.cellSize)
         return UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
     }()
-
+    
     private func buildCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
+        collectionView.register(TicTacToeCell.self, forCellWithReuseIdentifier: Constants.cellIdentifier)
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (maker: ConstraintMaker) in
             maker.center.equalTo(self.view.snp.center)
@@ -97,21 +97,21 @@ fileprivate struct Constants {
 }
 
 extension TicTacToeViewController: UICollectionViewDataSource {
-
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return Constants.sectionCount
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return GameConstants.rowCount * GameConstants.colCount
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let reusedCell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath)
-        reset(cell: reusedCell)
-        return reusedCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.cellIdentifier, for: indexPath) as! TicTacToeCell
+        cell.reset()
+        return cell
     }
-
+    
     private func reset(cell: UICollectionViewCell) {
         cell.backgroundColor = Constants.defaultColor
         cell.contentView.layer.borderWidth = 2
@@ -122,10 +122,45 @@ extension TicTacToeViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension TicTacToeViewController: UICollectionViewDelegate {
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let row = indexPath.row / GameConstants.colCount
         let col = indexPath.row - row * GameConstants.rowCount
         listener?.placeCurrentPlayerMark(atRow: row, col: col)
+    }
+}
+
+// MARK: - TicTacToeCell
+
+class TicTacToeCell: UICollectionViewCell {
+    
+    let markLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 40)
+        return label
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(markLabel)
+        markLabel.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setMark(_ mark: String) {
+        markLabel.text = mark
+    }
+    
+    func reset() {
+        markLabel.text = nil
+        backgroundColor = Constants.defaultColor
+        contentView.layer.borderWidth = 2
+        contentView.layer.borderColor = UIColor.lightGray.cgColor
     }
 }

@@ -15,7 +15,7 @@ protocol TicTacToeRouting: ViewableRouting {
 protocol TicTacToePresentable: Presentable {
     var listener: TicTacToePresentableListener? { get set }
     func setCell(atRow row: Int, col: Int, withPlayerType playerType: PlayerType)
-    func announce(winner: PlayerType?, withCompletionHandler handler: @escaping () -> ())
+    func announce(winner: PlayerType, withCompletionHandler handler: @escaping () -> ())
 }
 
 protocol TicTacToeListener: AnyObject {
@@ -132,7 +132,9 @@ final class TicTacToeInteractor: PresentableInteractor<TicTacToePresentable>, Ti
             }
         }
 
-        return nil
+        // 引き分けのチェック
+        let isDraw = !board.flatMap { $0 }.contains(nil)
+        return isDraw ? PlayerType.none : nil
     }
 }
 

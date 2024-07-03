@@ -31,7 +31,7 @@ final class OffGameViewController: UIViewController, OffGamePresentable, OffGame
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.yellow
+        view.backgroundColor = UIColor.white
         buildStartButton()
         buildPlayerLabels()
     }
@@ -74,16 +74,16 @@ final class OffGameViewController: UIViewController, OffGamePresentable, OffGame
     }
 
     private func buildPlayerLabels() {
-        let labelBuilder: (UIColor) -> UILabel = { (color: UIColor) in
+        let labelBuilder: () -> UILabel = {
             let label = UILabel()
             label.font = UIFont.boldSystemFont(ofSize: 35)
             label.backgroundColor = UIColor.clear
-            label.textColor = color
+            label.textColor = UIColor.darkText
             label.textAlignment = .center
             return label
         }
 
-        let player1Label = labelBuilder(PlayerType.player1.color)
+        let player1Label = labelBuilder()
         self.player1Label = player1Label
         view.addSubview(player1Label)
         player1Label.snp.makeConstraints { (maker: ConstraintMaker) in
@@ -95,7 +95,7 @@ final class OffGameViewController: UIViewController, OffGamePresentable, OffGame
         let vsLabel = UILabel()
         vsLabel.font = UIFont.systemFont(ofSize: 25)
         vsLabel.backgroundColor = UIColor.clear
-        vsLabel.textColor = UIColor.darkGray
+        vsLabel.textColor = UIColor.darkText
         vsLabel.textAlignment = .center
         vsLabel.text = "vs"
         view.addSubview(vsLabel)
@@ -105,7 +105,7 @@ final class OffGameViewController: UIViewController, OffGamePresentable, OffGame
             maker.height.equalTo(20)
         }
 
-        let player2Label = labelBuilder(PlayerType.player2.color)
+        let player2Label = labelBuilder()
         self.player2Label = player2Label
         view.addSubview(player2Label)
         player2Label.snp.makeConstraints { (maker: ConstraintMaker) in
@@ -125,14 +125,3 @@ final class OffGameViewController: UIViewController, OffGamePresentable, OffGame
     }
 }
 
-extension PlayerType {
-
-    var color: UIColor {
-        switch self {
-        case .player1:
-            return UIColor.red
-        case .player2:
-            return UIColor.blue
-        }
-    }
-}
